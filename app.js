@@ -30,7 +30,7 @@ bot.on("guildCreate", guild =>{
   console.log(`New guild added : ${guild.name}, owned by ${guild.owner.user.username}`);
 });
 
-string meme[ 5 ] = {"Tips more than 21S", "8686868686868686", "lol worse than 8000H", "563? more like TRASH!", "spermflys"}
+var meme = ['Tips more than 21S', '8686868686868686', 'lol worse than 8000H', 'spermflys'];
 
 bot.on('message', message => {
   if(message.author.bot) return;
@@ -57,12 +57,12 @@ bot.on('message', message => {
     }
 
   }
-    
+
   if(command === "meh-meh"){
-    message.reply(string[Math.floor((Math.random() * 5))]);
+    message.reply(meme[Math.floor((Math.random() * (meme.length - 1)))]);
 
   }
-    
+
   if(command === "kick"){
     let modRole = message.guild.roles.find("name", "Admin");
     if(!hasRole(message.member, "Admin")){

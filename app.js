@@ -1,32 +1,3 @@
-app.js
-DETAILS
-ACTIVITY
-app.js
-Sharing Info
-U
-
-General Info
-Type
-Javascript
-Size
-3 KB (3,582 bytes)
-Storage used
-0 bytesOwned by someone else
-Location
-Ro-BO
-Owner
-Unionjackjz
-Modified
-9:34 PM by Unionjackjz
-Opened
-4:34 PM by me
-Created
-4:03 PM
-Description
-Add a description
-Download permissions
-Viewers can download
-
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 

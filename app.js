@@ -6,13 +6,16 @@ const config = require("./config.json");
 function pluck(array) {
 	return array.map(function(item) { return item["name"]; });
 }
-
 function hasRole(mem, role) {
   return (pluck(mem.roles).includes(role));
 }
 function commandIs(str, msg){
 	return msg.content.toLowerCase().startsWith("!" + str)
 }
+
+//function consoleLog(str){
+//	console.log('[' + getHours() + ':' + getMinutes() + ':' + getSeconds() + '] ' + str);
+//}
 
 bot.on('ready', () => {
 	console.log('Bot Online!');
@@ -26,10 +29,10 @@ bot.on("guildMemberAdd", member =>{
 var meme = [
   'Tips more than 21S',
   '8686868686868686',
-  'lol worse than 8000H',
+  'worse than the 60X programming skill score XD',
   'spermflys',
   '62? more like 60X XD',
-  'GIT GUD M8',
+  'GET GUD M8',
   'not enough water',
   'Coryz typing skill level'
 ];
@@ -46,7 +49,12 @@ bot.on('message', message => {
 
   if(command === "help") {
     message.channel.sendMessage(
-    "**!meme** | Displays:ok_hand: :fire: meme\n**!ping** | pong\n**!say <message>** | I'll do whatever you say :wink:\n**!kick** | Bye bye :cry:\n**!purge <input>** | Clears messages from chat\n**!roll** | Roll the dice!");
+    "**!meme** | Displays:ok_hand: :fire: meme" +
+    "\n**!ping** | pong" +
+    "\n**!say <message>** | I'll do whatever you say :wink:" +
+    "\n**!kick** | Bye bye :cry:" +
+    "\n**!purge <input>** | Clears messages from chat" +
+    "\n**!roll** | Roll the dice!");
   }
 
   if(command === "heil") {
@@ -58,7 +66,7 @@ bot.on('message', message => {
       var placeHolder = args.join("");
 			message.channel.sendMessage(placeHolder);
 		}else {
-			message.reply("Don't tell me what to do :angry:");
+			message.reply("You can't tell me what to do :angry:");
 		}
 	}
 
